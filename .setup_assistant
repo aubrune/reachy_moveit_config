@@ -4,7 +4,7 @@ moveit_setup_assistant_config:
     relative_path: reachy.URDF
     xacro_args: ""
   SRDF:
-    relative_path: config/Reachy.srdf
+    relative_path: config/reachy.srdf
   CONFIG:
     author_name: Yoan Mollard
     author_email: yoan.mollard@poppy-station.org
