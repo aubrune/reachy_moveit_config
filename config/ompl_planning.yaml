@@ -127,37 +127,8 @@ planner_configs:
     sparse_delta_fraction: 0.25  # delta fraction for connection distance. This value represents the visibility range of sparse samples. default: 0.25
     dense_delta_fraction: 0.001  # delta fraction for interface detection. default: 0.001
     max_failures: 5000  # maximum consecutive failure limit. default: 5000
-right_arm:
-  default_planner_config: None
-  planner_configs:
-    - AnytimePathShortening
-    - SBL
-    - EST
-    - LBKPIECE
-    - BKPIECE
-    - KPIECE
-    - RRT
-    - RRTConnect
-    - RRTstar
-    - TRRT
-    - PRM
-    - PRMstar
-    - FMT
-    - BFMT
-    - PDST
-    - STRIDE
-    - BiTRRT
-    - LBTRRT
-    - BiEST
-    - ProjEST
-    - LazyPRM
-    - LazyPRMstar
-    - SPARS
-    - SPARStwo
-  projection_evaluator: joints(r_shoulder_pitch,r_shoulder_roll)
-  longest_valid_segment_fraction: 0.005
 left_arm:
-  default_planner_config: None
+  default_planner_config: RRTConnect
   planner_configs:
     - AnytimePathShortening
     - SBL
@@ -184,4 +155,33 @@ left_arm:
     - SPARS
     - SPARStwo
   projection_evaluator: joints(l_shoulder_pitch,l_shoulder_roll)
+  longest_valid_segment_fraction: 0.005
+right_arm:
+  default_planner_config: RRTConnect
+  planner_configs:
+    - AnytimePathShortening
+    - SBL
+    - EST
+    - LBKPIECE
+    - BKPIECE
+    - KPIECE
+    - RRT
+    - RRTConnect
+    - RRTstar
+    - TRRT
+    - PRM
+    - PRMstar
+    - FMT
+    - BFMT
+    - PDST
+    - STRIDE
+    - BiTRRT
+    - LBTRRT
+    - BiEST
+    - ProjEST
+    - LazyPRM
+    - LazyPRMstar
+    - SPARS
+    - SPARStwo
+  projection_evaluator: joints(r_shoulder_pitch,r_shoulder_roll)
   longest_valid_segment_fraction: 0.005

@@ -8,4 +8,4 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: Yoan Mollard
     author_email: yoan.mollard@poppy-station.org
-    generated_timestamp: 1597021989
+    generated_timestamp: 1597102476
