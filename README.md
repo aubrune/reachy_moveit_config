@@ -1,5 +1,5 @@
-# reachy_moveit2_config
-Integration of the Reachy robot in MoveIt 2 for ROS 2
+# reachy_moveit_config
+Integration of the Reachy robot in MoveIt for ROS 1
 
 ## Install MoveIt
 
