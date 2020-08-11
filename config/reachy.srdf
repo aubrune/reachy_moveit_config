@@ -52,15 +52,26 @@
     <end_effector name="left_tip" parent_link="torso" group="left_arm" />
     <end_effector name="right_tip" parent_link="torso" group="right_arm" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="head" link2="l_antenna" reason="Adjacent" />
     <disable_collisions link1="head" link2="l_forearm" reason="Never" />
     <disable_collisions link1="head" link2="l_shoulder" reason="Never" />
     <disable_collisions link1="head" link2="l_shoulder_x" reason="Never" />
     <disable_collisions link1="head" link2="l_upper_arm" reason="Never" />
+    <disable_collisions link1="head" link2="r_antenna" reason="Adjacent" />
     <disable_collisions link1="head" link2="r_forearm" reason="Never" />
     <disable_collisions link1="head" link2="r_shoulder" reason="Never" />
     <disable_collisions link1="head" link2="r_shoulder_x" reason="Never" />
     <disable_collisions link1="head" link2="r_upper_arm" reason="Never" />
     <disable_collisions link1="head" link2="torso" reason="Adjacent" />
+    <disable_collisions link1="l_antenna" link2="l_shoulder" reason="Never" />
+    <disable_collisions link1="l_antenna" link2="l_shoulder_x" reason="Never" />
+    <disable_collisions link1="l_antenna" link2="r_antenna" reason="Never" />
+    <disable_collisions link1="l_antenna" link2="r_forearm" reason="Never" />
+    <disable_collisions link1="l_antenna" link2="r_shoulder" reason="Never" />
+    <disable_collisions link1="l_antenna" link2="r_shoulder_x" reason="Never" />
+    <disable_collisions link1="l_antenna" link2="r_upper_arm" reason="Never" />
+    <disable_collisions link1="l_antenna" link2="r_wrist" reason="Never" />
+    <disable_collisions link1="l_antenna" link2="torso" reason="Never" />
     <disable_collisions link1="l_forearm" link2="l_gripper_finger" reason="Never" />
     <disable_collisions link1="l_forearm" link2="l_gripper_thumb" reason="Never" />
     <disable_collisions link1="l_forearm" link2="l_shoulder" reason="Never" />
@@ -68,7 +79,10 @@
     <disable_collisions link1="l_forearm" link2="l_upper_arm" reason="Adjacent" />
     <disable_collisions link1="l_forearm" link2="l_wrist" reason="Adjacent" />
     <disable_collisions link1="l_forearm" link2="l_wrist2hand" reason="Never" />
+    <disable_collisions link1="l_forearm" link2="r_antenna" reason="Never" />
     <disable_collisions link1="l_forearm" link2="r_forearm" reason="Never" />
+    <disable_collisions link1="l_forearm" link2="r_gripper_finger" reason="Never" />
+    <disable_collisions link1="l_forearm" link2="r_gripper_thumb" reason="Never" />
     <disable_collisions link1="l_forearm" link2="r_shoulder" reason="Never" />
     <disable_collisions link1="l_forearm" link2="r_shoulder_x" reason="Never" />
     <disable_collisions link1="l_forearm" link2="r_upper_arm" reason="Never" />
@@ -78,17 +92,31 @@
     <disable_collisions link1="l_gripper_finger" link2="l_shoulder" reason="Never" />
     <disable_collisions link1="l_gripper_finger" link2="l_shoulder_x" reason="Never" />
     <disable_collisions link1="l_gripper_finger" link2="l_upper_arm" reason="Never" />
+    <disable_collisions link1="l_gripper_finger" link2="l_wrist" reason="Never" />
+    <disable_collisions link1="l_gripper_finger" link2="l_wrist2hand" reason="Never" />
+    <disable_collisions link1="l_gripper_finger" link2="r_gripper_thumb" reason="Never" />
+    <disable_collisions link1="l_gripper_finger" link2="r_shoulder" reason="Never" />
     <disable_collisions link1="l_gripper_finger" link2="r_shoulder_x" reason="Never" />
+    <disable_collisions link1="l_gripper_finger" link2="r_upper_arm" reason="Never" />
+    <disable_collisions link1="l_gripper_finger" link2="r_wrist2hand" reason="Never" />
     <disable_collisions link1="l_gripper_thumb" link2="l_shoulder" reason="Never" />
     <disable_collisions link1="l_gripper_thumb" link2="l_shoulder_x" reason="Never" />
     <disable_collisions link1="l_gripper_thumb" link2="l_upper_arm" reason="Never" />
     <disable_collisions link1="l_gripper_thumb" link2="l_wrist" reason="Never" />
     <disable_collisions link1="l_gripper_thumb" link2="l_wrist2hand" reason="Adjacent" />
+    <disable_collisions link1="l_gripper_thumb" link2="r_shoulder" reason="Never" />
     <disable_collisions link1="l_gripper_thumb" link2="r_shoulder_x" reason="Never" />
+    <disable_collisions link1="l_gripper_thumb" link2="r_upper_arm" reason="Never" />
+    <disable_collisions link1="l_gripper_thumb" link2="r_wrist" reason="Never" />
+    <disable_collisions link1="l_gripper_thumb" link2="r_wrist2hand" reason="Never" />
     <disable_collisions link1="l_shoulder" link2="l_shoulder_x" reason="Adjacent" />
+    <disable_collisions link1="l_shoulder" link2="l_upper_arm" reason="Never" />
     <disable_collisions link1="l_shoulder" link2="l_wrist" reason="Never" />
     <disable_collisions link1="l_shoulder" link2="l_wrist2hand" reason="Never" />
+    <disable_collisions link1="l_shoulder" link2="r_antenna" reason="Never" />
     <disable_collisions link1="l_shoulder" link2="r_forearm" reason="Never" />
+    <disable_collisions link1="l_shoulder" link2="r_gripper_finger" reason="Never" />
+    <disable_collisions link1="l_shoulder" link2="r_gripper_thumb" reason="Never" />
     <disable_collisions link1="l_shoulder" link2="r_shoulder" reason="Never" />
     <disable_collisions link1="l_shoulder" link2="r_shoulder_x" reason="Never" />
     <disable_collisions link1="l_shoulder" link2="r_upper_arm" reason="Never" />
@@ -98,6 +126,7 @@
     <disable_collisions link1="l_shoulder_x" link2="l_upper_arm" reason="Adjacent" />
     <disable_collisions link1="l_shoulder_x" link2="l_wrist" reason="Never" />
     <disable_collisions link1="l_shoulder_x" link2="l_wrist2hand" reason="Never" />
+    <disable_collisions link1="l_shoulder_x" link2="r_antenna" reason="Never" />
     <disable_collisions link1="l_shoulder_x" link2="r_forearm" reason="Never" />
     <disable_collisions link1="l_shoulder_x" link2="r_gripper_finger" reason="Never" />
     <disable_collisions link1="l_shoulder_x" link2="r_gripper_thumb" reason="Never" />
@@ -109,21 +138,36 @@
     <disable_collisions link1="l_shoulder_x" link2="torso" reason="Never" />
     <disable_collisions link1="l_upper_arm" link2="l_wrist" reason="Never" />
     <disable_collisions link1="l_upper_arm" link2="l_wrist2hand" reason="Never" />
+    <disable_collisions link1="l_upper_arm" link2="r_antenna" reason="Never" />
     <disable_collisions link1="l_upper_arm" link2="r_forearm" reason="Never" />
+    <disable_collisions link1="l_upper_arm" link2="r_gripper_finger" reason="Never" />
+    <disable_collisions link1="l_upper_arm" link2="r_gripper_thumb" reason="Never" />
     <disable_collisions link1="l_upper_arm" link2="r_shoulder" reason="Never" />
     <disable_collisions link1="l_upper_arm" link2="r_shoulder_x" reason="Never" />
     <disable_collisions link1="l_upper_arm" link2="r_upper_arm" reason="Never" />
     <disable_collisions link1="l_upper_arm" link2="r_wrist" reason="Never" />
     <disable_collisions link1="l_upper_arm" link2="r_wrist2hand" reason="Never" />
-    <disable_collisions link1="l_upper_arm" link2="torso" reason="Never" />
     <disable_collisions link1="l_wrist" link2="l_wrist2hand" reason="Adjacent" />
+    <disable_collisions link1="l_wrist" link2="r_antenna" reason="Never" />
     <disable_collisions link1="l_wrist" link2="r_forearm" reason="Never" />
+    <disable_collisions link1="l_wrist" link2="r_gripper_finger" reason="Never" />
+    <disable_collisions link1="l_wrist" link2="r_gripper_thumb" reason="Never" />
     <disable_collisions link1="l_wrist" link2="r_shoulder" reason="Never" />
     <disable_collisions link1="l_wrist" link2="r_shoulder_x" reason="Never" />
     <disable_collisions link1="l_wrist" link2="r_upper_arm" reason="Never" />
+    <disable_collisions link1="l_wrist" link2="r_wrist" reason="Never" />
+    <disable_collisions link1="l_wrist" link2="r_wrist2hand" reason="Never" />
+    <disable_collisions link1="l_wrist2hand" link2="r_antenna" reason="Never" />
+    <disable_collisions link1="l_wrist2hand" link2="r_forearm" reason="Never" />
+    <disable_collisions link1="l_wrist2hand" link2="r_gripper_finger" reason="Never" />
     <disable_collisions link1="l_wrist2hand" link2="r_shoulder" reason="Never" />
     <disable_collisions link1="l_wrist2hand" link2="r_shoulder_x" reason="Never" />
     <disable_collisions link1="l_wrist2hand" link2="r_upper_arm" reason="Never" />
+    <disable_collisions link1="l_wrist2hand" link2="r_wrist" reason="Never" />
+    <disable_collisions link1="l_wrist2hand" link2="r_wrist2hand" reason="Never" />
+    <disable_collisions link1="r_antenna" link2="r_shoulder" reason="Never" />
+    <disable_collisions link1="r_antenna" link2="r_shoulder_x" reason="Never" />
+    <disable_collisions link1="r_antenna" link2="torso" reason="Never" />
     <disable_collisions link1="r_forearm" link2="r_gripper_finger" reason="Never" />
     <disable_collisions link1="r_forearm" link2="r_gripper_thumb" reason="Never" />
     <disable_collisions link1="r_forearm" link2="r_shoulder" reason="Never" />
@@ -135,12 +179,15 @@
     <disable_collisions link1="r_gripper_finger" link2="r_shoulder" reason="Never" />
     <disable_collisions link1="r_gripper_finger" link2="r_shoulder_x" reason="Never" />
     <disable_collisions link1="r_gripper_finger" link2="r_upper_arm" reason="Never" />
+    <disable_collisions link1="r_gripper_finger" link2="r_wrist" reason="Never" />
+    <disable_collisions link1="r_gripper_finger" link2="r_wrist2hand" reason="Never" />
     <disable_collisions link1="r_gripper_thumb" link2="r_shoulder" reason="Never" />
     <disable_collisions link1="r_gripper_thumb" link2="r_shoulder_x" reason="Never" />
     <disable_collisions link1="r_gripper_thumb" link2="r_upper_arm" reason="Never" />
     <disable_collisions link1="r_gripper_thumb" link2="r_wrist" reason="Never" />
     <disable_collisions link1="r_gripper_thumb" link2="r_wrist2hand" reason="Adjacent" />
     <disable_collisions link1="r_shoulder" link2="r_shoulder_x" reason="Adjacent" />
+    <disable_collisions link1="r_shoulder" link2="r_upper_arm" reason="Never" />
     <disable_collisions link1="r_shoulder" link2="r_wrist" reason="Never" />
     <disable_collisions link1="r_shoulder" link2="r_wrist2hand" reason="Never" />
     <disable_collisions link1="r_shoulder" link2="torso" reason="Adjacent" />
@@ -150,6 +197,5 @@
     <disable_collisions link1="r_shoulder_x" link2="torso" reason="Never" />
     <disable_collisions link1="r_upper_arm" link2="r_wrist" reason="Never" />
     <disable_collisions link1="r_upper_arm" link2="r_wrist2hand" reason="Never" />
-    <disable_collisions link1="r_upper_arm" link2="torso" reason="Never" />
     <disable_collisions link1="r_wrist" link2="r_wrist2hand" reason="Adjacent" />
 </robot>
