@@ -9,7 +9,7 @@ Make sure you have installed [ROS 1](http://wiki.ros.org/noetic/Installation), [
 roslaunch reachy_moveit_config demo.launch
 ```
 
-Pickup a group in the **Query Planning Group** from the **Motion Planning** panel (right arm, left arm or head) and move the blue ball appearing at the tip of the end effector to some goal pose. Then lick **Plan and Execute** to plan a trajectory with obstacle avoidance and run it with fake trajectory controllers.
+Pickup a group in the **Query Planning Group** from the **Motion Planning** panel (right arm, left arm or head) and move the blue ball appearing at the tip of the end effector to some goal pose. Then click **Plan and Execute** to plan a trajectory with obstacle avoidance and run it with fake trajectory controllers.
 
 ## Install MoveIt
 
