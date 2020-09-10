@@ -62,7 +62,7 @@
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="left_tip" parent_link="torso" group="left_arm" />
     <end_effector name="right_tip" parent_link="torso" group="right_arm" />
-    <end_effector name="head_tip" parent_link="pedestal" group="head" />
+    <end_effector name="head_tip" parent_link="torso" group="head" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="bottom_orbita_arm" link2="head" reason="Never" />
     <disable_collisions link1="bottom_orbita_arm" link2="l_antenna" reason="Never" />
