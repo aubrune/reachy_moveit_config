@@ -17,6 +17,11 @@ hardware_interface:
     - l_wrist_pitch
     - l_wrist_roll
     - l_gripper
+    - orbita_roll
+    - orbita_pitch
+    - orbita_yaw
+    - l_antenna
+    - r_antenna
     - r_shoulder_pitch
     - r_shoulder_roll
     - r_arm_yaw
@@ -25,8 +30,6 @@ hardware_interface:
     - r_wrist_pitch
     - r_wrist_roll
     - r_gripper
-    - l_antenna
-    - r_antenna
   sim_control_mode: 1  # 0: position, 1: velocity
 # Publish all joint states
 # Creates the /joint_states topic necessary in ROS
@@ -58,3 +61,11 @@ controller_list:
       - r_forearm_yaw
       - r_wrist_pitch
       - r_wrist_roll
+  - name: head_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - orbita_roll
+      - orbita_pitch
+      - orbita_yaw

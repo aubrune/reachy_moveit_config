@@ -17,8 +17,15 @@ controller_list:
       - r_forearm_yaw
       - r_wrist_pitch
       - r_wrist_roll
+  - name: fake_head_controller
+    joints:
+      - orbita_roll
+      - orbita_pitch
+      - orbita_yaw
 initial:  # Define initial robot poses.
   - group: left_arm
     pose: left_rest
   - group: right_arm
     pose: right_rest
+  - group: head
+    pose: head_rest
