@@ -1,4 +1,9 @@
 <launch>
+  <!-- Select your Reachy configuration -->
+  <arg name="head" default="true" />
+  <arg name="left_arm" default="true" />
+  <arg name="right_arm" default="true" />
+
   <!-- By default we do not overwrite the URDF. Change the following to true to change the default behavior -->
   <arg name="load_robot_description" default="false"/>
 
@@ -6,8 +11,7 @@
   <arg name="robot_description" default="robot_description"/>
 
   <!-- Load universal robot description format (URDF) -->
-  <param if="$(arg load_robot_description)" name="$(arg robot_description)" textfile="$(find reachy_description)/reachy.URDF"/>
-
+  <param name="$(arg robot_description)" command="$(find xacro)/xacro $(find reachy_description)/reachy.URDF.xacro head:=$(arg head) right_arm:=$(arg right_arm) left_arm:=$(arg left_arm)" />
   <!-- The semantic description that corresponds to the URDF -->
   <param name="$(arg robot_description)_semantic" textfile="$(find reachy_moveit_config)/config/reachy.srdf" />
 

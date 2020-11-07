@@ -1,4 +1,8 @@
 <launch>
+  <!-- Select your Reachy configuration -->
+  <arg name="head" default="true" />
+  <arg name="left_arm" default="true" />
+  <arg name="right_arm" default="true" />
 
   <!-- GDB Debug Option -->
   <arg name="debug" default="false" />
@@ -41,6 +45,9 @@
   <!-- load URDF, SRDF and joint_limits configuration -->
   <include file="$(find reachy_moveit_config)/launch/planning_context.launch">
     <arg name="load_robot_description" value="$(arg load_robot_description)" />
+    <arg name="head" value="$(arg head)" />
+    <arg name="left_arm" value="$(arg left_arm)" />
+    <arg name="right_arm" value="$(arg right_arm)" />
   </include>
 
   <!-- Planning Functionality -->

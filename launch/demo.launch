@@ -1,5 +1,10 @@
 <launch>
 
+  <!-- Select your Reachy configuration -->
+  <arg name="head" default="true" />
+  <arg name="left_arm" default="true" />
+  <arg name="right_arm" default="true" />
+
   <!-- specify the planning pipeline -->
   <arg name="pipeline" default="ompl" />
 
@@ -22,14 +27,8 @@
   <arg name="use_gui" default="false" />
   <arg name="use_rviz" default="true" />
 
-  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
-  <include file="$(find reachy_moveit_config)/launch/planning_context.launch">
-    <arg name="load_robot_description" value="true"/>
-  </include>
-
   <!-- If needed, broadcast static tf for robot root -->
   
-
   <!-- We do not have a robot connected, so publish fake joint states -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
     <param name="use_gui" value="$(arg use_gui)"/>
@@ -41,6 +40,9 @@
 
   <!-- Run the main MoveIt executable without trajectory execution (we do not have controllers configured by default) -->
   <include file="$(find reachy_moveit_config)/launch/move_group.launch">
+    <arg name="head" value="$(arg head)" />
+    <arg name="left_arm" value="$(arg left_arm)" />
+    <arg name="right_arm" value="$(arg right_arm)" />
     <arg name="allow_trajectory_execution" value="true"/>
     <arg name="fake_execution" value="true"/>
     <arg name="info" value="true"/>
