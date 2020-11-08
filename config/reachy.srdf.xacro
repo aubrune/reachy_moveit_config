@@ -147,6 +147,8 @@
             <disable_collisions link1="l_wrist" link2="r_antenna" reason="Never" />
             <disable_collisions link1="l_wrist2hand" link2="r_antenna" reason="Never" />
             <disable_collisions link1="l_shoulder_x" link2="r_antenna" reason="Never" />
+            <disable_collisions link1="l_forearm" link2="r_antenna" reason="Never" />
+            <disable_collisions link1="l_upper_arm" link2="r_antenna" reason="Never" />
         </xacro:if> <!-- left_arm and head -->
 
         <xacro:if value="$(arg right_arm)">
@@ -168,7 +170,6 @@
             <disable_collisions link1="l_antenna" link2="r_shoulder_x" reason="Never" />
             <disable_collisions link1="l_antenna" link2="r_upper_arm" reason="Never" />
             <disable_collisions link1="l_antenna" link2="r_wrist" reason="Never" />
-            <disable_collisions link1="l_forearm" link2="r_antenna" reason="Never" />
             <disable_collisions link1="middle_orbita_arm" link2="r_forearm" reason="Never" />
             <disable_collisions link1="middle_orbita_arm" link2="r_gripper_finger" reason="Never" />
             <disable_collisions link1="middle_orbita_arm" link2="r_gripper_thumb" reason="Never" />
@@ -177,7 +178,6 @@
             <disable_collisions link1="middle_orbita_arm" link2="r_upper_arm" reason="Never" />
             <disable_collisions link1="middle_orbita_arm" link2="r_wrist" reason="Never" />
             <disable_collisions link1="middle_orbita_arm" link2="r_wrist2hand" reason="Never" />
-            <disable_collisions link1="l_upper_arm" link2="r_antenna" reason="Never" />
             <disable_collisions link1="r_antenna" link2="top_orbita_arm" reason="Never" />
             <disable_collisions link1="r_forearm" link2="top_orbita_arm" reason="Never" />
             <disable_collisions link1="r_gripper_finger" link2="top_orbita_arm" reason="Never" />
