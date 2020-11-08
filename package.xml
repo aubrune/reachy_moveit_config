@@ -1,9 +1,9 @@
 <package>
 
   <name>reachy_moveit_config</name>
-  <version>0.3.0</version>
+  <version>1.0.0</version>
   <description>
-     An automatically generated package with all the configuration and launch files for using the Reachy with the MoveIt Motion Planning Framework
+     All the configuration and launch files for using the Reachy with the MoveIt Motion Planning Framework
   </description>
   <author email="yoan.mollard@poppy-station.org">Yoan Mollard</author>
   <maintainer email="yoan.mollard@poppy-station.org">Yoan Mollard</maintainer>
